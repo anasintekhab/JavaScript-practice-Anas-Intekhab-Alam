@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".step1_btn").click(function() {
+
+                var text = $(".source").text();
+                var parts = text.split(" ");
+
+                for (var i = 0; i < parts.length; i++) {
+                    var input = "<input type='checkbox' value='" + i + "'/>";
+                    var cbLabel = "<label>" + parts[i] + "</label>";
+                    $("#demo").append(input + cbLabel);
+                }
+            });
+        });
+    </script>
+    <title>Q1 22-08-2022</title>
+</head>
+
+<body>
+    <H1>ANAS INTEKHAB ALAM</H1>
+    Enter String
+    <input type="text" placeholder="Type " id="inputId">
+    <button type="button" onclick="getInputValue();">Get length</button>
+    <button type="button" onclick="getToUpper();">Get upper case</button>
+    <button type="button" onclick="getToLower();">Get lower case</button>
+    <br>
+    <hr>
+    <br>
+    <textarea class="source">Bob Ram Raheem Foo</textarea>
+    <button type="button" class="step1_btn">Split</button>
+    <div id="demo" class="splited"></div>
+    <script>
+        function getInputValue() {
+
+            let inputVal = document.getElementById("inputId").value;
+
+            length = inputVal.length;
+            document.write(length);
+        }
+
+        function getToUpper() {
+            let inputVal = document.getElementById("inputId").value;
+            result = inputVal.toUpperCase();
+            document.write(result);
+        }
+
+        function getToLower() {
+            let inputVal = document.getElementById("inputId").value;
+            result = inputVal.toLowerCase();
+            document.write(result);
+        }
+    </script>
+</body>
+
+</html>

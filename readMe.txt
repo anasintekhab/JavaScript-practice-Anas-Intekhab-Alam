@@ -1,0 +1,1 @@
+put style.css inside css folder then execute the code
